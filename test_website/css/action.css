@@ -1,0 +1,8 @@
+.button {
+    background:url(http://ratofy.xyz/imgs/star.png) no-repeat;
+    cursor:pointer;
+    width: 25px;
+    height: 25px;
+    border: none;
+	color: transparent;
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Ratofy</title>
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<script type="text/javascript">
+	function validateForm(){
+		if(document.forms["inputform"]["username"].value == null || document.forms["inputform"]["password"].value == null){
+			alert("Both fields are mandatory");
+			return false;
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="big_wrapper">
+		<header class="top_header">
+			<div>
+				<h1>Ratofy</h1>
+			</div>
+			<div class="right">
+				<nav class="top_menu">
+				<ul>
+					<a href="#"><li>Services</li></a>
+					<a href="#"><li>People</li></a>
+					<a href="#"><li>Products</li></a>
+				</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<section class="main_section">
+			<form method="post" action="../php/signup.php" name="inputform" onSubmit="return validateForm()">
+				<input type="text" class="textbox" name="firstname" placeholder="First Name">
+				<input type="text" class="textbox" name="lastname" placeholder="Last Name"><br>
+				<input type="text" class="textbox" name="contact" placeholder="Only 10 digits Mobile Number"><br>
+				<input type="text" class="textbox" name="email" placeholder="Email"><br>
+				<input type="password" class="textbox" name="password" placeholder="Password"><br>
+				<p><input class="button" type="submit" name="signup" value="Sign-Up"></p>
+			</form>
+		</section>
+
+		<footer class="the_footer">
+			<nav>
+				<ul>
+					<a href="#"><li>About Us</li></a>
+					<a href="#"><li>Terms of Use</li></a>
+					<a href="#"><li>Privacy and Cookies</li></a>
+					<a href="#"><li>Advertisers</li></a>
+				</ul>
+			</nav>
+			<p>Copyrights(c) 2016, Ratofy</p>
+		</footer>
+		
+	</div>
+</body>
+</html>

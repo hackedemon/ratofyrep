@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Ratofy</title>
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<script type="text/javascript">
+	function validateForm(){
+		if(document.forms["inputform"]["username"].value == '' || document.forms["inputform"]["password"].value == ''){
+			alert("Both fields are mandatory");
+			return false;
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="big_wrapper">
+		<header class="top_header">
+			<div>
+				<h1>Ratofy</h1>
+			</div>
+			<div class="right">
+				<nav class="top_menu">
+				<ul>
+					<a href="#"><li>Services</li></a>
+					<a href="#"><li>People</li></a>
+					<a href="#"><li>Products</li></a>
+				</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<section class="main_section">
+			<form method="post" action="../php/check.php" name="inputform" onSubmit="return validateForm()">
+				<input type="text" class="textbox" name="username" placeholder="Email used while Sign-Up"><br>
+				<input type="password" class="textbox" name="password" placeholder="Password"><br>
+				<p><input class="button" type="submit" name="login" value="Login"></p>
+			</form>
+			<p>New user? <a href="signup.html">Sign-Up</a></p>
+		</section>
+
+		<footer class="the_footer">
+			<nav>
+				<ul>
+					<a href="#"><li>About Us</li></a>
+					<a href="#"><li>Terms of Use</li></a>
+					<a href="#"><li>Privacy and Cookies</li></a>
+					<a href="#"><li>Advertisers</li></a>
+				</ul>
+			</nav>
+			<p>Copyrights(c) 2016, Ratofy</p>
+		</footer>
+		
+	</div>
+</body>
+</html>

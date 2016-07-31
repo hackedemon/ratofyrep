@@ -1,0 +1,118 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+h1{
+	font: bold 24px Tahoma;
+}
+h2{
+	font: 20px Tahoma;
+}
+body{
+	text-align:center;
+}
+a{
+	font: bold 14px Tahoma;
+	color: white;
+	text-decoration: none;
+}
+.big_wrapper{
+	text-align:left;
+	background: #FFA500;
+	width: 100%;
+}
+.top_header{
+	padding: 20px;
+	border: 1px solid white;
+	background: white;
+	color: #FFA500;
+}
+.top_header h2{
+	color: #FFA500;
+}
+.top_header div{
+	display: inline-block;
+	padding: 5px;
+}
+.right {
+	float:right;
+}
+.top_menu li{
+	display: inline;
+	list-style: none;
+	font:14px Tahoma;
+	color: gray;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.top_menu{
+	padding-top: 4px;
+	padding-bottom: 2px;
+}
+.main_section{
+	padding:50px;
+	text-align: center;
+}
+
+.main_section input{
+	padding:10px;
+	margin:10px;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+	width: 60%;
+	text-align: left;
+	margin-left: -5%;
+	padding: 0;
+    /*border-bottom: 1px dotted black; If you want dots under the hoverable text */
+}
+.tooltip input{
+	width: 95%;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+	top: 80%;
+    left: 50%; 
+    margin-left: -40%; /* Use half of the width (120/2 = 60), to center the tooltip */
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.textbox {
+	border: none;
+	width: 60%;
+}
+
+.the_footer{
+	padding: 5px;
+	color: white;
+	padding-left: 15px;
+	border-top: 2px solid white;
+	text-align: center;
+}
+.the_footer li{
+	margin-right: 5px;
+	display: inline;
+	list-style: none;
+}
+
+.the_footer p{
+	padding: 10px;
+}
