@@ -38,18 +38,22 @@
 					die("Connection failed: " . $conn->connect_error);
 				} else {
 					$username = $_POST['username'];
-					$address = $_POST['password'];
+					$password = $_POST['password'];
 					
-					$sql = "SELECT first_name FROM usersbb";
+					$sql = "SELECT first_name FROM usersbb where username = '$username' and password = '$password'";
+					//$sql = "SELECT * FROM usersbb where '1' = '1'";
 					$result = $conn->query($sql);
 					
 					if ($result->num_rows > 0){
-						session_start();
+						/*session_start();
 						$_SESSION["name"] = $result;
 						echo 'If you are not redirected click <a href="index.php">here</a>';
 						Header("HTTP/1.1 301 Moved Permanently");
 						Header("Location: index.php");
-						exit();
+						exit();*/
+						while($row = $result->fetch_assoc()) {
+							echo ''.$row["first_name"].'';
+						}
 					} else {
 						echo "Incorrect username or password";
 						echo 'If you are not redirected click <a href="../html/login.html">here</a>';

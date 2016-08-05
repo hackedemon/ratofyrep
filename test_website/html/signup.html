@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="../css/index.css">
 	<script type="text/javascript">
 	function validateForm(){
-		if(document.forms["inputform"]["username"].value == null || document.forms["inputform"]["password"].value == null){
-			alert("Both fields are mandatory");
+		if(document.forms["inputform"]["username"].value == '' || document.forms["inputform"]["password"].value == '' || document.forms["inputform"]["password"].value == ''){
+			alert("All fields are mandatory");
 			return false;
 		}
 	}
@@ -34,7 +34,7 @@
 		<section class="main_section">
 			<form method="post" action="../php/signup.php" name="inputform" onSubmit="return validateForm()">
 				<input type="text" class="textbox" name="firstname" placeholder="First Name">
-				<input type="text" class="textbox" name="lastname" placeholder="Last Name"><br>
+				<input type="text" class="textbox" name="lastname" placeholder="Last Name">
 				<input type="text" class="textbox" name="contact" placeholder="Only 10 digits Mobile Number"><br>
 				<input type="text" class="textbox" name="email" placeholder="Email"><br>
 				<input type="password" class="textbox" name="password" placeholder="Password"><br>

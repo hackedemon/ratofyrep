@@ -43,16 +43,22 @@
 					$username = $_POST['email'];
 					$address = $_POST['password'];
 					
-					$sql = "INSERT INTO usersbb ('First_Name', 'Last_Name', 'Contact', 'username', 'password') VALUES ('$firstname','$lastname','$contact','$username','$password',)";
-					
+					$sql = "INSERT INTO `usersbb`(`First_Name`, `Last_Name`, `username`, `password`) VALUES ('$firstname','$lastname','$username','$address')";
+
 					if ($conn->query($sql)){
+						//$result = $conn->query($sql);
 						session_start();
-						$_SESSION["name"] = $result;
+						$_SESSION["name"] = $firstname;
+						//$result->num_rows;
+						//while($row = $result->fetch_assoc()) {
+							//$_SESSION["name"] = $row["First_Name"];
+						//}
 						echo 'If you are not redirected click <a href="index.php">here</a>';
 						Header("HTTP/1.1 301 Moved Permanently");
 						Header("Location: index.php");
 						exit();
 					} else {
+						//echo "$conn->query($sql)";
 						echo "Error Inserting Record";
 						echo 'If you are not redirected click <a href="../html/login.html">here</a>';
 						Header("HTTP/1.1 301 Moved Permanently");
